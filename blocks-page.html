@@ -80,8 +80,10 @@ page_blocks:
 
 <!-- This must be included in order for blocks to pull through from the includes folder -->
 {% for block in page.page_blocks %}
-     {% include /blocks/{{block._id}}.html %}
+     {% include blocks/{{block._id}}.html %}
 {% endfor %}
+
+
 
 <!-- General notes on blocks:
 
