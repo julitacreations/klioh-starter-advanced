@@ -89,7 +89,7 @@ page_blocks:
 
 - The _id: must match the title of the file in the includes folder. Eg image-text.html would be _id: image-text
 
-- Inside the includes, it must be {{block.image}} instead of {{page.image}}, the exception is if it's in a forloop in which case it can be {% for item in block.images %} {{item.image}}
+- Inside the includes, it must be {{block.image}} instead of {{page.image}}, the exception is if it's in a forloop in which case it can be {% for item in block.images %} {{item.image}} {% endfor %}
 - Don't put fixed content inside the blocks - they must all be pulled in from the front matter. So instead of <p>Hello!</p>, it should be <p>{{block.heading}}</p>, and the front matter would be:
 
   - _id: image-text
