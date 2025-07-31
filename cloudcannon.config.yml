@@ -1,0 +1,506 @@
+_schema: _schema
+paths:
+  uploads: uploads
+  static: ''
+collections_config:
+  pages:
+    path: ''
+    name: Pages
+    icon: wysiwyg
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  data:
+    path: _data
+    name: Data
+    icon: data_usage
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
+_snippets_imports:
+  jekyll: true
+timezone: Europe/London
+markdown:
+  engine: kramdown
+  options:
+    xhtml: false
+    breaks: false
+    linkify: false
+    typographer: false
+    spaced_lists: false
+    sentence_per_line: false
+    gfm: false
+    code_block_fences: '```'
+    escape_snippets_in_code_blocks: false
+    treat_indentation_as_code: true
+    table: false
+    strikethrough: false
+    subscript: false
+    superscript: false
+    heading_ids: false
+    attributes: true
+    attribute_elements:
+      inline: right
+      block: below
+      tr: none
+      td: none
+      li: right-of-prefix
+_inputs:
+  layout:
+    type: text
+    hidden: true
+    cascade: true
+  hero_image:
+    comment: Always include an image here. Even if you opt for video (in case of slow internet connection - so there will always be an image)
+  hero_mobile_image: 
+    comment: Add mobile specific image. If left empty it will default to hero_image.
+  use_video:
+    comment: Check this box if you want to use a video instead.
+  video_path:
+    comment: Upload an .mp4 under 5MB for best performance.
+  hero_mobile_video_path:
+    comment: Add mobile specific video under 5MB. If left empty it will default to hero_video.
+  position:
+    comment: Choose whether the text sits at the top or bottom
+  cta_title:
+    comment: Use a max of 40characters for this CTA
+  alt:
+    comment: Describe the image for screen readers and accessibility.
+  show_border:
+    comment: Select this if you want a thin border around the image
+  flush:
+    comment: Removes spacing around the image (edge-to-edge)
+  mobile_order:
+    comment: Choose which order you want the image and the text to show up on mobile. (e.g image = first and text = second or vice versa)
+ 
+  use_instagram_widget:
+    comment: Use an auto-updating widget that shows your recent instagram posts from your chosen provider
+  widget_embed_code:
+    comment: Paste your Instagram widget code embed here
+  instagram_username:
+    comment: Add your instagram handle without the @ symbol
+  instagram_static_feed:
+    comment: manual instagram images and links - this option does not update automatically
+
+  technical.code_for_head:
+    type: array
+    label: Code for Head
+    comment: >
+      Add embed code snippets here. E.g use this for Google Analytics, Facebook Pixel, etc.
+    fields:
+      - name: code
+        label: Embed Code
+        type: textarea
+        long: true
+  technical.newsletter_embed:
+  label: Newsletter Embed
+  type: textarea
+  long: true
+  comment: >
+    Paste your newsletter signup form embed here. It will appear in the site footer.
+
+  
+
+
+  color_background:
+    label: Background Colour
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: bg-light
+          label: Light Background
+        - key: bg-primary
+          label: Primary Background
+        - key: bg-secondary
+          label: Secondary Background
+        - key: bg-dark
+          label: Dark Background
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  color_text:
+    label: Text Colour
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: text-light
+          label: Light Text Colour
+        - key: text-primary
+          label: Primary Text Colour
+        - key: text-secondary
+          label: Secondary Text Colour
+        - key: text-dark
+          label: Dark Text Colour
+        - key: text-white
+          label: White Text
+        - key: text-black
+          label: Black Text
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  color_border:
+    label: Border Colour
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: border-light
+          label: Light Border
+        - key: border-primary
+          label: Primary Border
+        - key: border-secondary
+          label: Secondary Border
+        - key: border-dark
+          label: Dark Border
+      value_key: key
+      preview:
+        text:
+          - key: label
+  color_body_text:
+    label: Body Text Colour
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: text-light
+          label: Light Text
+        - key: text-primary
+          label: Primary Text
+        - key: text-secondary
+          label: Dark Text
+        - key: text-dark
+          label: Dark Text
+        - key: text-white
+          label: White Text
+        - key: text-black
+          label: Black Text
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  button_style:
+    label: Button Style
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: button-dark
+          label: Dark Button
+        - key: button-light
+          label: Light Button
+        - key: button-text
+          label: Text Button
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  section_spacing:
+    label: Section Spacing
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: p-4 md:p-5
+          label: Small spacing
+        - key: px-4 py-6 md:p-12
+          label: Medium spacing
+        - key: px-4 py-12 md:px-12 md:py-16
+          label: Large spacing
+      value_key: key
+      preview:
+        text:
+          - key: label
+    comment: >-
+      This adds space around the content
+    cascade: true
+  
+  section_image_height:
+    label: Section Image Height
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: lg:h-90 md:h-70 h-80
+          label: Default Height (90% of screen)
+        - key: lg:h-screen md:h-80 h-screen
+          label: Full Height (100% of screen)
+      value_key: key
+      preview:
+        text:
+          - key: label
+  section_height:
+    label: Section Height
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: lg:h-[90vh] md:h-[70vh] h-[80vh]
+          label: Default Height (90% of screen)
+        - key: h-screen
+          label: Full Height (100% of screen)
+        - key: h-[50vh]
+          label: Half Height
+        - key: lg:h-[75vh] md:h-[65vh] h-[75vh]
+          label: 3/4 Height
+        - key: md:h-[33vh] h-[50vh]
+          label: 1/3 Height
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+
+  column_count:
+    label: Column Count
+    type: range
+    comment: Choose between 1-8
+    options:
+      min: 1
+      max: 8
+      step: 1
+
+
+  column_width:
+    label: Column Width
+    type: range
+    comment: Pick the width of this column. For full width (choose 12). For half width (choose 6 + 6). For 3 columns or one-third width (choose 4). The total amount for the image + text, text + text, or just video must always equal to 12.
+    options:
+      min: 1
+      max: 12
+      step: 1
+  
+  image_position:
+    label: Image Position
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: left
+          label: Image Left
+        - key: right
+          label: Image Right
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  text_position:
+    label: Text position
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+         - key: justify-start
+           label: Top
+         - key: justify-center
+           label: Middle
+         - key: justify-end
+           label: Bottom
+      value_key: key
+      preview:
+        text:
+          - key: label
+  text_align:
+    label: Text Alignment
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: text-left
+          label: Left
+        - key: text-center
+          label: Center
+        - key: text-right
+          label: Right
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+  mobile_order:
+    label: Mobile Order
+    type: select
+    options:
+      allow_create:
+      allow_empty: false
+      values:
+        - key: one
+          label: First
+        - key: two
+          label: Second
+      value_key: key
+      preview:
+        text:
+          - key: label
+
+_array_structures:
+  page_blocks:
+    - label: Hero Banner
+      icon: photo_camera
+      value:
+        _id: hero-banner
+        hero_image:
+        hero_mobile_image:
+        use_video: false
+        video_path:
+        hero_mobile_video_path:
+        show_cta_banner: true
+        cta_title:
+        button_url:
+        button_text:
+        button_style:
+    - label: Image Text Block
+      icon: view_column_2
+      value:
+        _id: image-text
+        color_background:
+        columns:
+    
+    - label: Image Banner
+      icon: image
+      value:
+        _id: image-banner
+        section_height:
+        image:
+        show_text: true
+        title:
+        description_html:
+        button_text:
+        button_url:
+        button_style:
+    - label: Text Block
+      icon: description
+      value:
+        _id: text
+        color_background:
+        section_spacing:
+        title_html:
+        button_text:
+        button_url:
+        button_style:
+        description_html:
+
+    - label: Image and Title Grid
+      icon: view_column
+      value:
+        _id: image-title-grid
+        column_count: 3
+        blocks:
+          - grid_title:
+            grid_image:
+            alt:
+    - label: Image Slider
+      icon: view_carousel
+      value:
+        _id: image-slider
+        slider_items:
+          - image:
+            title:
+            url: 
+    - label: Image Testimonial Slider
+      icon: view_carousel
+      value:
+        _id: image-testimonial-slider
+        color_background:
+        image:
+        image_position: left
+        reviews:
+          - review:
+            reviewer:
+    - label: Text Testimonial Slider
+      icon: page_control
+      value:
+        _id: slider-with-dots
+        section_spacing:
+        color_background:
+        title:
+        slider-items:
+          - review_title:
+            review:
+            reviewer:
+    - label: Press Logos Slider
+      icon: breaking_news
+      value:
+        _id: press-slider
+        color_background:
+        press:
+          - image:
+
+    - label: Instagram Feed
+      icon: monochrome_photos
+      value:
+        _id: instagram-feed
+        use_instagram_widget: false
+        widget_embed_code:
+        instagram_username:
+        instagram_static_feed:
+          images:
+            - image:
+    - label: Contact Block
+      icon: contact_mail
+      value:
+        _id: contact
+        image:
+        alt:
+        title:
+        description_html:
+
+
+  columns:
+    - label: image
+      icon: photo_camera
+      value:
+         _type: image
+         column_width:
+         section_image_height:
+         section_spacing:
+         flush: false
+         image:
+         alt:
+         show_border: false
+         color_border:
+         mobile_order:
+    - label: text
+      icon: description
+      value:
+         _type: text
+         column_width:
+         section_spacing:
+         text_position: bottom
+         text_align: left
+         title_html:
+         description_html: <p>Add body text here.</p>
+         color_text:
+         color_body_text:
+         button_text:
+         button_url:
+         button_style:
+         mobile_order:
+    - label: video
+      icon: video
+      value:
+         _type: video
+         column_width: 12
+         section_spacing:
+         flush: false
+         video_url:
+         poster_image: 
